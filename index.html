@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="manifest" href="manifest.json">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
 
 <meta name="theme-color" content="#7b2cff">
 
@@ -48,7 +51,7 @@ Duck
 
     <h2>Continue Crumboing</h2>
 
-    <div class="music-card" onclick="playCrumbo()">
+    <div class="music-card" onclick="playSong(crumboSongs[0])">
     <div class="album purple"></div>
     <div>
         <h3>Microwave Dreams</h3>
@@ -98,6 +101,25 @@ Duck
 
 </div>
 
+<h2>
+Recently Played
+</h2>
+
+
+<div id="recent-songs" class="history">
+
+</div>
+
+
+<h2>
+Made For You
+</h2>
+
+
+<div id="recommended-songs" class="history">
+
+</div>
+
 
     <h2>Recently Played</h2>
 
@@ -125,9 +147,21 @@ Duck
     </div>
 
 
-    <div class="score">
-        ⭐ Crumbo Score: 48,903
-    </div>
+   <div class="score">
+
+    <h2>
+    ⭐ Crumbo Score
+    </h2>
+
+    <h1 id="crumbo-score">
+    48,903
+    </h1>
+
+    <p id="crumbo-level">
+    Supreme Crumber
+    </p>
+
+</div>
 
 
 </div>
@@ -205,6 +239,101 @@ Duck
 
     <h2>Your Stats</h2>
 
+<div class="crumbo-history">
+
+
+<h2>📜 Crumbo History</h2>
+
+
+<div class="history-card">
+
+<p>
+🦆 Crumbo member since:
+</p>
+
+<h3>
+March 14, 2021
+</h3>
+
+
+<p>
+You've been Crumboing for:
+</p>
+
+<h3>
+5 years, 4 months
+</h3>
+
+</div>
+
+
+
+<h2>🎧 Lifetime Favorites</h2>
+
+
+<div class="history-card">
+
+<p>
+👑 #1 Artist
+</p>
+
+<h3>
+Beyoncé
+</h3>
+
+
+<p>
+🟣 #2 Artist
+</p>
+
+<h3>
+Echo Laundry
+</h3>
+
+
+<p>
+🦆 #3 Artist
+</p>
+
+<h3>
+Tuesday Owls
+</h3>
+
+</div>
+
+
+
+<h2>🔥 Most Played Songs</h2>
+
+
+<div class="history-card">
+
+<p>
+1. Microwave Dreams
+<br>
+▶ 842 plays
+</p>
+
+
+<p>
+2. Purple Emergency
+<br>
+▶ 719 plays
+</p>
+
+
+<p>
+3. Duck Symphony
+<br>
+▶ 601 plays
+</p>
+
+
+</div>
+
+
+
+</div>
 
     <div class="stats">
 
@@ -292,7 +421,7 @@ placeholder="Search songs, artists, crumbs..."
 
     <h1>Now Playing</h1>
 
-    <div class="album big purple"></div>
+    <div id="player-art" class="album big purple"></div>
 
     <h2>Microwave Dreams</h2>
     <p>Echo Laundry</p>

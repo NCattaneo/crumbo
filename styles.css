@@ -1,284 +1,81 @@
-body {
-    background:white;
-    font-family:-apple-system, BlinkMacSystemFont, Arial, sans-serif;
-    color:#222;
-    margin:0;
+/* CRUMBO MOBILE APP STYLES */
+
+* {
+    box-sizing:border-box;
 }
+
+
+html, body {
+
+    width:100%;
+    min-height:100%;
+
+    margin:0;
+
+    overflow-x:hidden;
+
+}
+
+
+body {
+
+    background:white;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:#222;
+
+}
+
 
 .app {
-    padding:25px;
-    padding-bottom:100px;
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+    padding-bottom:110px;
+
 }
+
+
+/* TEXT */
 
 h1 {
+
     color:#7b2cff;
+
+    font-size:32px;
+
 }
 
 
-.crumbo-card {
-    background:linear-gradient(135deg,#7b2cff,#c49cff);
-    color:white;
-    border-radius:25px;
-    padding:25px;
-    text-align:center;
+h2 {
+
+    font-size:24px;
+
+    margin-top:28px;
+
 }
 
 
-.duck {
-    font-size:80px;
-}
+h3 {
 
-
-.music-card {
-    display:flex;
-    align-items:center;
-    gap:20px;
-    background:#f5f1ff;
-    padding:15px;
-    border-radius:20px;
-}
-
-
-.album {
-    width:70px;
-    height:70px;
-    border-radius:12px;
-}
-
-
-.purple {
-    background:#7b2cff;
-}
-
-.pink {
-    background:#ff6fb5;
-}
-
-.blue {
-    background:#4ca8ff;
-}
-
-.green {
-    background:#53d769;
-}
-
-
-.playlist-row {
-    display:flex;
-    gap:15px;
-    overflow:hidden;
-}
-
-
-.playlist {
-    width:100px;
-}
-
-
-.playlist p {
-    font-size:13px;
-}
-
-
-.history {
-    background:#fafafa;
-    padding:15px;
-    border-radius:20px;
-}
-
-
-.wrapped {
-    margin-top:25px;
-    padding:25px;
-    border-radius:25px;
-    background:#111;
-    color:white;
-}
-
-
-.score {
-    margin-top:25px;
-    background:#7b2cff;
-    color:white;
-    padding:20px;
-    border-radius:20px;
     font-size:20px;
-}
-
-
-nav {
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    height:70px;
-    background:white;
-    border-top:1px solid #ddd;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    color:#7b2cff;
-}
-
-#crumbo-loader {
-
-    display:none;
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-    135deg,
-    #7b2cff,
-    #d8baff
-    );
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:10;
 
 }
 
 
-.loader-box {
-
-    text-align:center;
-
-    color:white;
-
-    animation:
-    bounce .8s infinite alternate;
-
-}
-
-
-.crumb-circle {
-
-    font-size:90px;
-
-}
-
-
-#player {
-
-    display:none;
-
-    text-align:center;
-
-    padding:30px;
-
-}
-
-
-.big {
-
-    width:200px;
-
-    height:200px;
-
-    margin:auto;
-
-}
-
-
-button {
-
-    background:#7b2cff;
-
-    color:white;
-
-    border:none;
-
-    padding:15px 30px;
-
-    border-radius:30px;
-
-    font-size:18px;
-
-}
-
-
-@keyframes bounce {
-
-    from {
-
-        transform:scale(1);
-
-    }
-
-    to {
-
-        transform:scale(1.1);
-
-    }
-
-}
-.progress-container {
-
-    width:80%;
-
-    height:8px;
-
-    background:#ddd;
-
-    border-radius:10px;
-
-    margin:20px auto;
-
-}
-
-
-#progress {
-
-    height:100%;
-
-    width:0%;
-
-    background:#7b2cff;
-
-    border-radius:10px;
-
-}
-
-.page {
-
-    display:none;
-
-}
-
-
-.profile-card {
-
-    background:#f5f1ff;
-
-    border-radius:25px;
-
-    padding:25px;
-
-    text-align:center;
-
-}
-
-
-.avatar {
-
-    font-size:80px;
-
-}
-
-
-.stats {
-
-    background:#fafafa;
-
-    border-radius:20px;
-
-    padding:20px;
-
-}
+/* TOP BAR */
 
 .top-bar {
 
@@ -301,25 +98,486 @@ button {
 
     border-radius:50%;
 
-    width:45px;
+    width:55px;
 
-    height:45px;
+    height:55px;
+
+    font-size:25px;
+
+}
+
+
+/* DAILY CRUMBO */
+
+.crumbo-card {
+
+    background:
+    linear-gradient(
+    135deg,
+    #7b2cff,
+    #c49cff
+    );
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+
+.duck {
+
+    font-size:100px;
+
+}
+
+
+#daily-crumbo {
+
+    font-size:28px;
+
+}
+
+
+/* SONG CARDS */
+
+.music-card {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#f5f1ff;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    margin-top:15px;
+
+}
+
+
+.music-card h3 {
+
+    margin:0;
+
+}
+
+
+.music-card p {
+
+    font-size:18px;
+
+    margin:8px 0;
+
+}
+
+
+/* ALBUM ART */
+
+.album {
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:18px;
+
+    flex-shrink:0;
+
+}
+
+
+.big {
+
+    width:230px;
+
+    height:230px;
+
+    margin:20px auto;
+
+}
+
+
+.purple {
+
+    background:#7b2cff;
+
+}
+
+
+.pink {
+
+    background:#ff6fb5;
+
+}
+
+
+.blue {
+
+    background:#4ca8ff;
+
+}
+
+
+.green {
+
+    background:#53d769;
+
+}
+
+
+/* PLAYLISTS */
+
+.playlist-row {
+
+    display:flex;
+
+    gap:15px;
+
+    overflow-x:auto;
+
+}
+
+
+.playlist {
+
+    min-width:130px;
+
+}
+
+
+.playlist p {
+
+    font-size:16px;
+
+}
+
+
+/* HISTORY */
+
+.history {
+
+    background:#fafafa;
+
+    padding:15px;
+
+    border-radius:25px;
+
+}
+
+
+.history-card {
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    margin:15px 0;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.08);
+
+}
+
+
+.history-card h3 {
+
+    color:#7b2cff;
+
+    margin:0 0 8px 0;
+
+}
+
+
+.history-card p {
+
+    font-size:17px;
+
+}
+
+
+/* WRAPPED */
+
+.wrapped {
+
+    margin-top:25px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+/* SCORE */
+
+.score {
+
+    margin-top:25px;
+
+    background:#7b2cff;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+}
+
+
+.score h1 {
+
+    font-size:55px;
+
+    margin:10px;
+
+    color:white;
+
+}
+
+
+#crumbo-level {
+
+    color:#eadcff;
 
     font-size:20px;
 
 }
 
 
-.search-box {
+/* NAVIGATION */
+
+nav {
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:white;
+
+    border-top:1px solid #ddd;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    z-index:100;
+
+}
+
+
+nav span {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:#777;
+
+}
+
+
+nav small {
+
+    font-size:13px;
+
+}
+
+
+nav .active {
+
+    color:#7b2cff;
+
+}
+
+
+/* LOADER */
+
+#crumbo-loader {
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7b2cff,
+    #d8baff
+    );
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:200;
+
+}
+
+
+.loader-box {
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.crumb-circle {
+
+    font-size:110px;
+
+}
+
+
+/* PLAYER */
+
+#player {
+
+    display:none;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+button {
+
+    background:#7b2cff;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+}
+
+
+/* PROGRESS BAR */
+
+.progress-container {
 
     width:90%;
 
-    padding:15px;
+    height:10px;
+
+    background:#ddd;
+
+    border-radius:10px;
+
+    margin:25px auto;
+
+}
+
+
+#progress {
+
+    height:100%;
+
+    width:0%;
+
+    background:#7b2cff;
+
+    border-radius:10px;
+
+}
+
+
+/* PAGES */
+
+.page {
+
+    display:none;
+
+}
+
+
+.profile-card {
+
+    background:#f5f1ff;
 
     border-radius:25px;
 
-    border:2px solid #ddd;
+    padding:30px;
+
+    text-align:center;
+
+}
+
+
+.avatar {
+
+    font-size:100px;
+
+}
+
+
+.stats {
+
+    background:#fafafa;
+
+    border-radius:25px;
+
+    padding:25px;
 
     font-size:18px;
+
+}
+
+
+/* SEARCH */
+
+.search-box {
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:30px;
+
+    border:2px solid #ddd;
+
+    font-size:20px;
 
 }
