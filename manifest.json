@@ -1,0 +1,17 @@
+{
+  "name": "Crumbo",
+  "short_name": "Crumbo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7b2cff",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "assets/crumbo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

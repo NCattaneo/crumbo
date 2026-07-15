@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#7b2cff">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<link rel="apple-touch-icon" href="assets/crumbo-icon.png">
+    <title>Crumbo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+    <div id="home-page">
+
+    <header>
+
+    <div class="top-bar">
+
+        <h1>CRUMBO</h1>
+
+        <button class="bell" onclick="showNotifications()">
+            🔔
+        </button>
+
+    </div>
+
+    <p>Good afternoon 👋</p>
+
+</header>
+
+
+    <div class="crumbo-card">
+        <h2>Today's Crumbo</h2>
+        <div class="duck">🦆</div>
+        <h3 id="daily-crumbo">
+Duck
+</h3>
+        <p>Your daily dose of Crumbo.</p>
+    </div>
+
+
+    <h2>Continue Crumboing</h2>
+
+    <div class="music-card" onclick="playCrumbo()">
+    <div class="album purple"></div>
+    <div>
+        <h3>Microwave Dreams</h3>
+        <p>Echo Laundry</p>
+    </div>
+    </div>
+
+
+    <h2>Made For You</h2>
+
+    <div class="playlist-row">
+
+        <div class="playlist">
+            <div class="album pink"></div>
+            <p>Daily Crumbo #184</p>
+        </div>
+
+        <div class="playlist">
+            <div class="album blue"></div>
+            <p>Purple Emergency</p>
+        </div>
+
+        <div class="playlist">
+            <div class="album green"></div>
+            <p>Duck Mode</p>
+        </div>
+
+        
+
+    </div>
+    
+    <h2>Your Playlists</h2>
+
+<div class="history">
+
+    <p>🟣 Microwave Thoughts (created 2021)</p>
+
+    <p>🟣 Songs I Forgot I Added</p>
+
+    <p>🟣 Duck Mode 🦆</p>
+
+    <p>🟣 Purple Emergency</p>
+
+    <p>🟣 Music For Staring Out Windows</p>
+
+    <p>🟣 John Collection</p>
+
+</div>
+
+
+    <h2>Recently Played</h2>
+
+    <div class="history">
+
+        <p>🎵 Coffee at Midnight — Echo Laundry</p>
+        <p>🎵 Ceiling Fan (Live) — John</p>
+        <p>🎵 Purple Chair — Tuesday Owls</p>
+        <p>🎵 Beyoncé — Renaissance</p>
+
+    </div>
+
+
+    <div class="wrapped">
+
+        <h2>Crumb Wrapped 2025</h2>
+
+        <p>👑 Top Artist</p>
+        <h1>Beyoncé</h1>
+
+        <p>98,412 minutes listened</p>
+
+        <p>You were in the top 0.03% of listeners.</p>
+
+    </div>
+
+
+    <div class="score">
+        ⭐ Crumbo Score: 48,903
+    </div>
+
+
+</div>
+</div>
+
+
+<nav>
+
+    <span onclick="showHome()" id="home-tab">
+        🏠
+        <small>Home</small>
+    </span>
+
+
+    <span onclick="showSearch()" id="search-tab">
+        🔍
+        <small>Search</small>
+    </span>
+
+
+    <span onclick="showLibrary()" id="library-tab">
+        📚
+        <small>Library</small>
+    </span>
+
+
+    <span onclick="showProfile()" id="profile-tab">
+        👤
+        <small>Profile</small>
+    </span>
+
+</nav>
+
+<div id="crumbo-loader">
+
+    <div class="loader-box">
+
+        <h1 id="crumbo-message">
+            That's SO crumbo!
+        </h1>
+
+        <div class="crumb-circle">
+            🦆
+        </div>
+
+    </div>
+
+</div>
+
+<div id="profile" class="page">
+
+    <h1>Your Crumbo</h1>
+
+
+    <div class="profile-card">
+
+        <div class="avatar">
+            🦆
+        </div>
+
+
+        <h2>Professional Crumber</h2>
+
+        <p>
+            Member since 2021
+        </p>
+
+
+        <p>
+            ⭐ Crumbo Score: 48,903
+        </p>
+
+    </div>
+
+
+    <h2>Your Stats</h2>
+
+
+    <div class="stats">
+
+        <p>🎧 98,412 minutes listened</p>
+
+        <p>🔥 147 day listening streak</p>
+
+        <p>🎵 8,419 songs Crumbo'd</p>
+
+        <p>📀 37 playlists created</p>
+
+    </div>
+
+
+    <div class="wrapped">
+
+        <h2>Crumb Wrapped 2025</h2>
+
+        <h3>👑 Top Artist</h3>
+
+        <h1>Beyoncé</h1>
+
+        <p>
+            You were in the top 0.03% of listeners.
+        </p>
+
+    </div>
+
+
+</div>
+
+<div id="notifications" class="page">
+
+    <h1>Notifications</h1>
+
+
+    <div class="history">
+
+        <p>🦆 Your Crumbo streak reached 100 days!</p>
+
+        <p>🎵 Echo Laundry released "Purple Microwave."</p>
+
+        <p>⭐ Your Crumbo Score increased by 500.</p>
+
+        <p>👑 Your Beyoncé phase has been documented.</p>
+
+        <p>🦆 Duck has been added to Today's Crumbo.</p>
+
+    </div>
+
+
+</div>
+<div id="search-page" class="page">
+
+<h1>Search Crumbo</h1>
+
+
+<input 
+class="search-box"
+placeholder="Search songs, artists, crumbs..."
+>
+
+
+<h2>Recent Searches</h2>
+
+
+<div class="history">
+
+<p>🦆 duck</p>
+
+<p>🟣 purple</p>
+
+<p>👤 john</p>
+
+<p>🎤 Beyoncé</p>
+
+<p>🍞 crumbs</p>
+
+</div>
+
+
+</div>
+
+<div id="player">
+
+    <h1>Now Playing</h1>
+
+    <div class="album big purple"></div>
+
+    <h2>Microwave Dreams</h2>
+    <p>Echo Laundry</p>
+
+   <audio id="audio-player">
+
+    <source src="audio/song1.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<div class="progress-container">
+
+    <div id="progress"></div>
+
+</div>
+
+
+<button onclick="toggleSong()">
+
+▶ Play / Pause
+
+</button>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
