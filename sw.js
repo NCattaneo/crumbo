@@ -1,4 +1,4 @@
-const CACHE_NAME = "crumbo-v2";
+const CACHE_NAME = "crumbo-v4";
 
 
 const FILES_TO_CACHE = [
@@ -10,6 +10,8 @@ const FILES_TO_CACHE = [
     "./styles.css",
 
     "./app.js",
+
+    "./songs.js",
 
     "./manifest.json"
 
@@ -33,6 +35,40 @@ event => {
 
     );
 
+    self.skipWaiting();
+
+});
+
+
+
+self.addEventListener(
+"activate",
+event => {
+
+    event.waitUntil(
+
+        caches.keys().then(keys => {
+
+            return Promise.all(
+
+                keys.map(key => {
+
+                    if(key !== CACHE_NAME){
+
+                        return caches.delete(key);
+
+                    }
+
+                })
+
+            );
+
+        })
+
+    );
+
+    self.clients.claim();
+
 });
 
 
@@ -43,11 +79,17 @@ event => {
 
     event.respondWith(
 
-        caches.match(event.request)
+        fetch(event.request)
 
         .then(response => {
 
-            return response || fetch(event.request);
+            return response;
+
+        })
+
+        .catch(()=>{
+
+            return caches.match(event.request);
 
         })
 

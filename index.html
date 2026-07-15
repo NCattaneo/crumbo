@@ -18,6 +18,41 @@
 </head>
 
 <body>
+<div id="player">
+
+    <div class="mini-player">
+
+        <div id="player-art" class="album purple"></div>
+
+        <div class="player-info">
+
+            <h3 id="player-title">
+                Nothing Playing
+            </h3>
+
+            <p id="player-artist">
+                Choose a Crumbo
+            </p>
+
+        </div>
+
+        <button onclick="toggleSong()">
+            ▶
+        </button>
+
+    </div>
+
+
+    <audio id="audio-player"></audio>
+
+
+    <div class="progress-container">
+
+        <div id="progress"></div>
+
+    </div>
+
+</div>
 
 <div class="app">
     <div id="home-page">
@@ -417,36 +452,9 @@ placeholder="Search songs, artists, crumbs..."
 
 </div>
 
-<div id="player">
-
-    <h1>Now Playing</h1>
-
-    <div id="player-art" class="album big purple"></div>
-
-    <h2>Microwave Dreams</h2>
-    <p>Echo Laundry</p>
-
-   <audio id="audio-player">
-
-    <source src="audio/song1.mp3" type="audio/mpeg">
-
-</audio>
 
 
-<div class="progress-container">
-
-    <div id="progress"></div>
-
-</div>
-
-
-<button onclick="toggleSong()">
-
-▶ Play / Pause
-
-</button>
-
-</div>
+<script src="songs.js"></script>
 
 <script src="app.js"></script>
 

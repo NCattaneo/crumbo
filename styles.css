@@ -41,7 +41,7 @@ body {
 
     margin:0 auto;
 
-    padding:20px;
+    padding-top:90px;
 
     padding-bottom:110px;
 
@@ -470,9 +470,78 @@ nav .active {
 
     display:none;
 
-    text-align:center;
+    position:fixed;
 
-    padding:30px;
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    z-index:150;
+
+    padding:10px;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.15);
+
+}
+
+
+.mini-player {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.mini-player .album {
+
+    width:55px;
+
+    height:55px;
+
+}
+
+
+.player-info {
+
+    flex:1;
+
+}
+
+
+.player-info h3 {
+
+    margin:0;
+
+    font-size:16px;
+
+}
+
+
+.player-info p {
+
+    margin:3px 0;
+
+    color:#777;
+
+}
+
+
+.mini-player button {
+
+    width:45px;
+
+    height:45px;
+
+    padding:0;
 
 }
 
